@@ -1,0 +1,25 @@
+<%= form_tag send_email_path, class: "send-email" do %>
+  <%= submit_tag "Click to Send Email", style: "margin: 10px; padding: 10px" %>
+<% end %>
+
+
+<script>
+document.querySelector(".send-email").onsubmit = function(e) {
+  e.preventDefault();
+
+  fetch(e.target.action, {
+    method: "POST",
+    headers: {
+      "X-CSRF-Token": document.querySelector('meta[name="csrf-token"]').content,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ send_email: true })
+  }).then(function(response) {
+    if (response.ok) {
+      window.open('/mail', '_blank');
+    } else {
+      console.error(response);
+    }
+  });
+};
+</script>
