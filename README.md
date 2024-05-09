@@ -1,4 +1,3 @@
-```markdown
 # Mailman: Automated Customer Support System
 
 ---
@@ -131,4 +130,3 @@ Mailman is released under the [MIT License](LICENSE). Feel free to use, modify, 
 ---
 
 By following this comprehensive guide, you'll be equipped with everything you need to deploy, configure, and customize Mailman to meet your organization's customer support needs. Enjoy the benefits of automated customer support and elevate your customer experience to new heights with Mailman!
-```
